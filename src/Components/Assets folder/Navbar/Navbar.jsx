@@ -14,10 +14,52 @@ function Navbar() {
       </div>
 
       <ul className="nav-menu">
-        <li>SHOP <hr/></li>
-        <li>MEN</li>
-        <li>WOMEN</li>
-        <li>KIDS</li>
+        <li
+          onClick={() => {
+            setmenu("SHOP");
+          }}
+        >
+          <Link style={{textDecoration: "none"}} to="/">SHOP</Link>
+           {menu === "SHOP" ? <hr /> : <></>}
+
+          SHOP {menu === "SHOP" ? <hr /> : <></>}
+
+        </li>
+        <li
+          onClick={() => {
+            setmenu("MEN");
+          }}
+        />
+          <Link style={{textDecoration: "none"}} to="/MEN">MEN</Link>
+          {menu === "MEN" ? <hr /> : <></>}
+        </li>
+        
+        <li
+          onClick={() => {
+            setmenu("WOMEN");
+          }}
+        >
+          <Link style={{textDecoration: "none"}} to="/WOMEN">WOMEN</Link>
+          {menu === "WOMEN" ? <hr /> : <></>}
+
+          MEN {menu === "MEN" ? <hr /> : <></>}
+        </li>
+        <li
+          onClick={() => {
+            setmenu("MEN");
+          }}
+        >
+          WOMEN {menu === "WOMEN" ? <hr /> : <></>}
+        </li>
+        <li
+          onClick={() => {
+            setmenu("KIDS");
+          }}
+        />
+          <Link style={{textDecoration: "none"}} to="/KIDS">KIDS</Link>
+          {menu === "KIDS" ? <hr /> : <></>}
+
+        </li>
       </ul>
 
       <div className="log-in-cart">
