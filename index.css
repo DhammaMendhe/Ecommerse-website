@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+.heading {
+  background: #dc84f3;
+}
+
+.hero {
+  display: flex;
+  gap: 450px;
+  background: #f3ccf3;
+}
+.discount {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.hero-line{
+    margin: 100px 20px 0px 140px;
+}
+.hero-line img {
+  width: 100px;
+  height: 100px;
+}
