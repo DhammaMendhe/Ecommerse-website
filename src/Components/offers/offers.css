@@ -1,0 +1,25 @@
+.offers{
+    width: 70%;
+    height: 70vh;
+    border: 2px solid black;
+    display: flex;
+    
+    gap:80px;
+    margin: 40px 0px 0px 60px;
+    background: linear-gradient(180deg, #EE99C2, #e1ffea22 60%);
+}
+.left-offers{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-offers button{
+    height: 2hv;
+    width: 8vw;
+}
+.right-offers img{
+ height: 62vh;
+ width: 20vw;   
+}

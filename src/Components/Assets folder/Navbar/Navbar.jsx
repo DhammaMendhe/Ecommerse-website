@@ -22,7 +22,6 @@ function Navbar() {
           <Link style={{textDecoration: "none"}} to="/">SHOP</Link>
            {menu === "SHOP" ? <hr /> : <></>}
 
-          SHOP {menu === "SHOP" ? <hr /> : <></>}
 
         </li>
         <li
@@ -42,15 +41,8 @@ function Navbar() {
           <Link style={{textDecoration: "none"}} to="/WOMEN">WOMEN</Link>
           {menu === "WOMEN" ? <hr /> : <></>}
 
-          MEN {menu === "MEN" ? <hr /> : <></>}
         </li>
-        <li
-          onClick={() => {
-            setmenu("MEN");
-          }}
-        >
-          WOMEN {menu === "WOMEN" ? <hr /> : <></>}
-        </li>
+    
         <li
           onClick={() => {
             setmenu("KIDS");
