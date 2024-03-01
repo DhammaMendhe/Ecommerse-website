@@ -9,7 +9,7 @@ export default function Popular() {
       <h1>POPULAR IN WOMEN</h1>
       <hr />
       <div className="popular-items">
-        {product_data.map((item, i) => {
+        {product_data.map((item,i) => {
           return (
             <Item
               key={i}

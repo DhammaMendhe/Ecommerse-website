@@ -9,7 +9,7 @@ export default function Offers() {
         <h1>Exclusive</h1>
         <h1>Offers for you</h1>
         <p>ONLY ON BEST SELLINGS PRODUCTS</p>
-        <button>C heck Now</button>
+        <button>Check Now</button>
       </div>
       <div className="right-offers">
         <img src={exclusive_img} alt="girl image" />

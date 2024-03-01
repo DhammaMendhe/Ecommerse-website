@@ -6,6 +6,7 @@ import ShopCategory from './Pages/ShopCategory.jsx'
 import Product from './Pages/Product.jsx'
 import LoginSignup from './Pages/LoginSignup.jsx'
 import Cart from './Pages/Cart.jsx';
+import Footer from './Components/footer/Footer.jsx';
 function App() {
   return (
     <div>
@@ -30,7 +31,7 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-
+    <Footer/>
     </div>
   );
 }
