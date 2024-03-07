@@ -3,7 +3,7 @@ footer {
   background: #092635;
 }
 .footer-container {
-  margin-top: 50vh;
+  margin-top: 40vh;
   height: 36vh;
   width: auto;
   display: flex;
@@ -11,25 +11,24 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 3vw;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.footer-logo h2{
-    font-size: 2.5vw;
-    margin-top: 18px;    
-
+.footer-logo h2 {
+  font-size: 2.5vw;
+  margin-top: 18px;
 }
 .hr-tag {
-    margin-left: 0;
-    width: 12vw;
-    animation-name: lefttoright;
-    animation-duration: 1s;
-    animation-delay: 1s;
-  }
+  margin-left: 0;
+  width: 12vw;
+  animation-name: lefttoright;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
 
 .footer-left-side h1 {
   font-size: 20px;
@@ -37,6 +36,7 @@ footer {
 
 .footer-left-side li {
   list-style: none;
+  cursor: pointer;
 }
 
 .first ul {
@@ -55,7 +55,6 @@ footer {
   }
 }
 
-
 /* .hr-tag:hover{
        
       transform: translateX(7vw);
@@ -67,17 +66,15 @@ footer {
       }  
   } */
 
-.footer-social-icon{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .middle-hr-tag {
   width: 80vw;
-    background: #f8f4ec;
+  background: #f8f4ec;
+
   /* margin: 40px -38px -10px -20px; */
 }
-
-

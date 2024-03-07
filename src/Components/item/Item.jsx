@@ -1,11 +1,13 @@
 import React from "react";
-import './item.css'
+import "./item.css";
 export default function Item(props) {
   return (
     <div className="item">
-      <img src={props.img} alt="product img" />
+      <link to={'/productId/${props.id}'}>
+        {" "}
+        <img src={props.img} alt="product img" />
+      </link>
       <p>{props.name}</p>
-
       <div className="item-prices">
         <div className="item-new-prices">${props.new_price}</div>
 

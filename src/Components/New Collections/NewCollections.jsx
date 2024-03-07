@@ -1,6 +1,5 @@
 import React from 'react'
 import './NewCollections.css'
-// import NewCollections from '../Assets folder/Assets/new_collections'
 import Item from '../item/Item'
 import new_collection from '../Assets folder/Assets/new_collections'
 export default function NewCollections() {

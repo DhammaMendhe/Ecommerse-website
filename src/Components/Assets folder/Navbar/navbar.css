@@ -63,11 +63,12 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    background: white ;
+    /* background: white ; */
 }
 
 .log-in-cart button:active{
     background: #B3FFAE;
+    color: #171717;
 }
 
 .nav-cart-count{

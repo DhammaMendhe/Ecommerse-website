@@ -55,10 +55,9 @@ function Navbar() {
       </ul>
 
       <div className="log-in-cart">
-        <button>
-          <Link style={{textDecoration: "none"}} to="/LoginSignup">login</Link>
-        </button>
-        <img src={cart_icon} alt="" />
+          <Link  to="/Login" ><button>login</button></Link>
+        
+          <Link  to="/cart" ><img src={cart_icon} alt="" /></Link>
         <div className="nav-cart-count">0</div>
       </div>
     </div>

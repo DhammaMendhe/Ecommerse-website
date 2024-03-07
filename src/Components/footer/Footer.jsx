@@ -8,6 +8,8 @@ import whatsup_logo from "../Assets folder/Assets/whatsapp_icon.png";
 export default function Footer() {
   return (
     <div class="footer-container">
+            <hr class="middle-hr-tag" />
+
       <div class="footer-logo">
         <img src={footer_logo} alt="" />
         <div>
