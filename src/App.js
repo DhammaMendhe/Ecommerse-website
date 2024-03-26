@@ -11,11 +11,9 @@ import men_banner from './Components/Assets folder/Assets/banner_mens.png'
 import women_banner from './Components/Assets folder/Assets/banner_women.png'
 import kids_banner from './Components/Assets folder/Assets/banner_kids.png'
 
-
 function App() {
   return (
     <div>
-
 
       <BrowserRouter>
         <Navbar />
@@ -27,7 +25,7 @@ function App() {
           <Route path='/WOMEN' element={<ShopCategory banner={women_banner} category="women" />} />
           <Route path='KIDS/' element={<ShopCategory banner={kids_banner}  category="kid" />} />
           <Route path='/product' element={<Product />}>
-            <Route path=':product' element={<Product />} />
+            <Route path=':productId' element={<Product />} />
 
           </Route>
           <Route path='/Cart' element={<Cart/>}/>

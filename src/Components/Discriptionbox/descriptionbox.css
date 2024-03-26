@@ -1,0 +1,31 @@
+.Discriptonbox {
+  margin: 120px 170px;
+}
+.descrioptionbox-navigator {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.descrioptionbox-navigator-nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 20px;  */
+  border: 1px solid #ededed;
+  width: 170px;
+  height: 70px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.descrioptionbox-navigator-nav-box.fade {
+  color: #555;
+  background: #fbfbfb;
+}
+.descrioptionbox-description {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d0d0d0;
+  gap: 25px;
+  padding: 48px;
+  padding-bottom: 70px;
+}
