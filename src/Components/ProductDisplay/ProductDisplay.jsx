@@ -5,7 +5,7 @@ import { ShopContext } from "../../Context/ShopContext";
 
 export default function ProductDisplay(props) {
   const { product } = props;
-  const {addToCart ,handleCartClickPlus} =useContext(ShopContext);
+  const {addToCart } =useContext(ShopContext);
 
   return (
     <div className="ProductDisplay">
@@ -53,7 +53,7 @@ export default function ProductDisplay(props) {
           <div>xl</div>
           <div>xxl</div>
         </div>
-        <button onClick={()=>{addToCart(product.id);handleCartClickPlus()}}>Add to Cart</button>
+        <button onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
       </div>
 
       <p className="productdisplay-right-category">

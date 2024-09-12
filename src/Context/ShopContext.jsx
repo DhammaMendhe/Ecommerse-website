@@ -8,53 +8,79 @@ const getDefaultCart = () => {
     cart[index] = 0;
   }
   return cart;
-}; 
-
+};
 
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  // const [count,setcount] = useState(0);
 
-  // const handlecount = ()=>{
-  // setcount(count+1);
-  // }
-  const [count ,setcount]= useState(0);
-const handleCartClickPlus = ()=>{
-  setcount(count+1);
-}
-
-
-const handleCartClickMinus = ()=>{
-  if(count>0){
-    setcount(count-1);
-
-  }
-}
-  console.log(cartItems);
+  const [count, setcount] = useState(0);
+  // const handleCartClickPlus = (itemid) => {
+  // console.log(itemid);
+  // setcount((count) => {
+  //   console.log(cart[itemid])
+  //   if (cart[itemid]<= 2) {
+  //    return ;
+  //   }
+  //   // return count + 1;
+  // });
+  // };
+  // console.log(cartItems);
 
   const addToCart = (ItemId) => {
-    console.log(ItemId)
+    console.log(ItemId);
 
     setCartItems((prev) => ({ ...prev, [ItemId]: prev[ItemId] + 1 }));
-    console.log(cartItems)
+localStorage.setItem("cartstore",cartItems);
+    setcount(() => {
+      
+
+          if (cartItems[ItemId] < 1) {
+            
+            console.log("what is this3",cartItems[ItemId]);
+            return count + 1;
+          }
+          else{
+           return  count;
+          }
+      
+
+      // console.log("this is into cart", cartItems[14]);
+      // const currentCount = (cartItems).find((cart)=>console.log(cart)   );
+      // Initialize count to 0 if undefined
+      // console.log("ithoiii",currentCount)
+      // console.log("this is setcount",typeof(cart))
+    });
   };
 
   const removeFromeCart = (ItemId) => {
-    console.log(ItemId)
+    console.log(ItemId);
     setCartItems((prev) => ({ ...prev, [ItemId]: prev[ItemId] - 1 }));
+    if (count > 0) {
+      setcount(count - 1);
+    }
   };
   const getTotalcartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = all_product.find((product) => product.id === Number(item));
+        let itemInfo = all_product.find(
+          (product) => product.id === Number(item)
+        );
         totalAmount += itemInfo.new_price * cartItems[item];
       }
-      return totalAmount;  
-    } 
+      return totalAmount;
+    }
   };
- 
-  const contextValue = { getTotalcartAmount,all_product, cartItems, addToCart, removeFromeCart,handleCartClickPlus , handleCartClickMinus,count};
+
+  const contextValue = {
+    getTotalcartAmount,
+    all_product,
+    cartItems,
+    addToCart,
+    removeFromeCart,
+    // handleCartClickPlus,
+    count,
+  };
 
   return (
     <ShopContext.Provider value={contextValue}>

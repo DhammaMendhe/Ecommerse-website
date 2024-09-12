@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../../Context/ShopContext";
 
 function Navbar() {
-const {handleCartClick,count} = useContext(ShopContext)
+const {count} = useContext(ShopContext)
 
   const [menu, setmenu] = useState("MEN");
   return (
