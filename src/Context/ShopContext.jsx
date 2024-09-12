@@ -10,9 +10,26 @@ const getDefaultCart = () => {
   return cart;
 }; 
 
+
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  // const [count,setcount] = useState(0);
 
+  // const handlecount = ()=>{
+  // setcount(count+1);
+  // }
+  const [count ,setcount]= useState(0);
+const handleCartClickPlus = ()=>{
+  setcount(count+1);
+}
+
+
+const handleCartClickMinus = ()=>{
+  if(count>0){
+    setcount(count-1);
+
+  }
+}
   console.log(cartItems);
 
   const addToCart = (ItemId) => {
@@ -36,12 +53,8 @@ const ShopContextProvider = (props) => {
       return totalAmount;  
     } 
   };
-  const [count,setcount] = useState(0);
-
-const handlecount = ()=>{
-setcount(count+1);
-}
-  const contextValue = { getTotalcartAmount,all_product, cartItems, addToCart, removeFromeCart,handlecount };
+ 
+  const contextValue = { getTotalcartAmount,all_product, cartItems, addToCart, removeFromeCart,handleCartClickPlus , handleCartClickMinus,count};
 
   return (
     <ShopContext.Provider value={contextValue}>

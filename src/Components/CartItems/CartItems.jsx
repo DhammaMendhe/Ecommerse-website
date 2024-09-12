@@ -4,7 +4,7 @@ import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets folder/Assets/cart_cross_icon.png";
 
 export default function CartItems() {
-  const { getTotalcartAmount, all_product, cartItems, removeFromeCart } = useContext(ShopContext);
+  const { getTotalcartAmount, all_product, cartItems, removeFromeCart ,handleCartClickMinus} = useContext(ShopContext);
   return (
     <div className="CartItems">
       <div className="cartitems-format-main">
@@ -32,7 +32,7 @@ export default function CartItems() {
                   className="cartitems-remove-icon"
                   src={remove_icon}
                   onClick={() => {
-                    removeFromeCart(e.id);
+                    removeFromeCart(e.id);handleCartClickMinus();
                   }}
                   alt=""
                 />
