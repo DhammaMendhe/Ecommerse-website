@@ -1,10 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./cartitems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets folder/Assets/cart_cross_icon.png";
 
 export default function CartItems() {
-  const { getTotalcartAmount, all_product, cartItems, removeFromeCart } = useContext(ShopContext);
+  const { getTotalcartAmount, all_product, cartItems, removeFromeCart } =
+    useContext(ShopContext);
+  const [quant, setquant] = useState(1);
+
+  const handleplus =(q)=>{
+    setquant(q=quant+1)
+  }
+  const handleminus =(q)=>{
+      if(quant > 0)
+    setquant(quant-1)
+  }
   return (
     <div className="CartItems">
       <div className="cartitems-format-main">
@@ -24,15 +34,22 @@ export default function CartItems() {
                 <img src={e.image} alt="" className="cartitem-product-image" />
                 <p>{e.name}</p>
                 <p>{e.new_price}</p>
-                <button className="cartitems-quantity">
-                  {cartItems[e.id]}
-                </button>
+                <div className="btncontainer ">
+                  <button onClick={()=>handleplus(cartItems[e.id])} >+</button>
+                  <button className="cartitems-quantity">
+                    {/* {cartItems[e.id]} */}
+                    {quant}
+                  </button>
+                  <button onClick={()=>handleminus(cartItems[e.id])}>-</button>
+
+                </div>
+
                 <p>{e.new_price * cartItems[e.id]}</p>
                 <img
                   className="cartitems-remove-icon"
                   src={remove_icon}
                   onClick={() => {
-                    removeFromeCart(e.id);//handleCartClickMinus(e.id);
+                    removeFromeCart(e.id); //handleCartClickMinus(e.id);
                   }}
                   alt=""
                 />
@@ -66,13 +83,12 @@ export default function CartItems() {
           </div>
         </div>
         <div className="cartitems-promocode">
-        <p>If you hava a promocode, Enter it here</p>
-        <div className="cartitems-promobox">
-          <input type="text" placeholder="promo code" />
-          <button>submit</button>
+          <p>If you hava a promocode, Enter it here</p>
+          <div className="cartitems-promobox">
+            <input type="text" placeholder="promo code" />
+            <button>submit</button>
+          </div>
         </div>
-       </div>
-      
       </div>
     </div>
   );

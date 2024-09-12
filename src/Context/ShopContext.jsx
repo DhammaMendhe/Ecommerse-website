@@ -30,19 +30,14 @@ const ShopContextProvider = (props) => {
     console.log(ItemId);
 
     setCartItems((prev) => ({ ...prev, [ItemId]: prev[ItemId] + 1 }));
-localStorage.setItem("cartstore",cartItems);
+    localStorage.setItem("cartstore", cartItems);
     setcount(() => {
-      
-
-          if (cartItems[ItemId] < 1) {
-            
-            console.log("what is this3",cartItems[ItemId]);
-            return count + 1;
-          }
-          else{
-           return  count;
-          }
-      
+      if (cartItems[ItemId] < 1) {
+        console.log("what is this3", cartItems[ItemId]);
+        return count + 1;
+      } else {
+        return count;
+      }
 
       // console.log("this is into cart", cartItems[14]);
       // const currentCount = (cartItems).find((cart)=>console.log(cart)   );
