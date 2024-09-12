@@ -7,18 +7,18 @@ import whatsup_logo from "../Assets folder/Assets/whatsapp_icon.png";
 
 export default function Footer() {
   return (
-    <div class="footer-container">
-            <hr class="middle-hr-tag" />
+    <div className="footer-container">
+            <hr className="middle-hr-tag" />
 
-      <div class="footer-logo">
+      <div className="footer-logo">
         <img src={footer_logo} alt="" />
         <div>
           <h2>SHOPPER</h2>
-          <hr class="hr-tag" />
+          <hr className="hr-tag" />
         </div>
       </div>
-      <div class="footer-left-side">
-        <div class="first">
+      <div className="footer-left-side">
+        <div className="first">
           <ul>
             <li>company</li>
             <li>product</li>
@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
 
-      <div class="footer-social-icon">
+      <div className="footer-social-icon">
         <div>
           <img src={insta_logo} alt="" />
         </div>
@@ -41,9 +41,9 @@ export default function Footer() {
           <img src={whatsup_logo} alt="" />
         </div>
       </div>
-      <hr class="middle-hr-tag" />
+      <hr className="middle-hr-tag" />
 
-      <div class="footer-cpy-right">
+      <div className="footer-cpy-right">
         <p>copyright @ 2023- All copyrights Are Reserved.</p>
       </div>
     </div>
