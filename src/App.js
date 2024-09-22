@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/Assets folder/Navbar/Navbar.jsx'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Shop from './Pages/Shop.jsx'
 import ShopCategory from './Pages/ShopCategory.jsx'
 import Product from './Pages/Product.jsx'
@@ -10,12 +10,13 @@ import Footer from './Components/footer/Footer.jsx';
 import men_banner from './Components/Assets folder/Assets/banner_mens.png'
 import women_banner from './Components/Assets folder/Assets/banner_women.png'
 import kids_banner from './Components/Assets folder/Assets/banner_kids.png'
+import Order from './Components/order details/Order.jsx';
 
 function App() {
   return (
     <div>
 
-      <BrowserRouter>
+      < Router>
         <Navbar />
         <Routes>
 
@@ -30,8 +31,10 @@ function App() {
           </Route>
           <Route path='/Cart' element={<Cart/>}/>
           <Route path='/login' element={<LoginSignup/>} />
+          <Route path='/order' element={<Order/>} />
+
         </Routes>
-      </BrowserRouter>
+      </Router>
 
     <Footer/>
     </div>

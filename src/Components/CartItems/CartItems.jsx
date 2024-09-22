@@ -2,11 +2,16 @@ import React, { useContext, useState } from "react";
 import "./cartitems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets folder/Assets/cart_cross_icon.png";
+import { useNavigate } from "react-router-dom";
 
 export default function CartItems() {
   const { getTotalcartAmount, all_product, cartItems, removeFromeCart } =
     useContext(ShopContext);
   const [quant, setquant] = useState(1);
+
+
+
+  const navigate = useNavigate();
 
   const handleplus =(q)=>{
     setquant(q=quant+1)
@@ -15,6 +20,13 @@ export default function CartItems() {
       if(quant > 0)
     setquant(quant-1)
   }
+
+  
+const handleorder = ()=>{
+console.log("this is order site..")
+navigate('/order')
+}
+
   return (
     <div className="CartItems">
       <div className="cartitems-format-main">
@@ -79,7 +91,7 @@ export default function CartItems() {
               <p>${getTotalcartAmount()}</p>
             </div>
             <hr />
-            <button> Proceed To Cheakout</button>
+            <button onClick={handleorder}>Proceed To Cheakout</button>
           </div>
         </div>
         <div className="cartitems-promocode">

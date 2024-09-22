@@ -12,7 +12,7 @@ export default function Offers() {
         <button>Check Now</button>
       </div>
       <div className="right-offers">
-        <img src={exclusive_img} alt="girl image" />
+        <img src={exclusive_img} alt="girl" />
       </div>
     </div>
   );
