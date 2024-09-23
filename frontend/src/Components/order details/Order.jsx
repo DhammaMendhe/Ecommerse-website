@@ -52,7 +52,7 @@ function Order() {
                 </div>
 
                 <div className="description">
-                  <h5 style={{fontWeight:400 ,width:'50%'}}>this is title of product ana want to Lorem ipsum dolor sit amet.</h5>
+                  <h5 style={{fontWeight:400 ,width:'50%'}}>This is title of product ana want to Lorem ipsum dolor sit amet.</h5>
                   <p>primary color : red</p>
 
                   <div className="butttons">
